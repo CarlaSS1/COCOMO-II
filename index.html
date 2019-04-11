@@ -295,7 +295,7 @@
     -->
   <FORM Name="calculateForm" >
 
-  <font  size="5"> <b> Information Domain Values</b>
+  <b> Information Domain Values</b>
   <!-- Creating the first table and its properties
     -->
   <TABLE class="table table-striped">
@@ -430,7 +430,6 @@
   </H2>
 
   <center>
-  <font color="#003399">
   <H> <b>Complexity Weighting Factors <H>
   <BR>
   // heading of the second table
@@ -444,7 +443,7 @@
   <!-- Creating the second table with its properties
        There is 14 questions (row) on the table and each one has the same properties.
     -->
-  <TABLE width="902" height="380">
+  <TABLE class="table table-striped" width="902" height="380">
     <TR>
       <TH  width="727" align="left" height="1"> <b>&nbsp;
         Question</b>
@@ -790,9 +789,6 @@
             onFocus = "promptQ14()" onBlur = "clearStatus()" >
           </b>
     <TR>
-      <TD width="727" align="left" height="23"><b>Total
-         <INPUT TYPE = "TEXT" VALUE = "" NAME = "total" size = 6 onfocus="return unfocus_total()">
-        </b>
         <TD width="20" align="left" height="23">
         <TD width="23" align="left" height="23">
         <TD width="24" align="left" height="23">
@@ -810,9 +806,14 @@
   <INPUT TYPE = "BUTTON" Name="showTotalWeight" VALUE = "Show Total of weighting Factor"
          onClick = "showWeightingTotal()">
 
+         <TD width="727" align="left" height="23">
+           <b>Total
+            <INPUT TYPE = "TEXT" VALUE = "" NAME = "total" size = 6 onfocus="return unfocus_total()">
+           </b>
+
   <BR><BR>&nbsp;&nbsp;&nbsp;&nbsp
 
-  <H>  <b><font size="5" >The Function Points is: </b> <H>
+  <H><b>The Function Points is: </b><H>
 
   <!-- a button which the user will click to get the Function Pioints value based on results form the first two tabgles.
     -->
@@ -831,7 +832,7 @@
        Here is a list of languages and LOC assoicated with it.
     -->
   <center>
-    <TABLE width="471">
+    <TABLE class="table table-striped" width="471">
     <TR>
       <TH  width="272"> <b>Programming Language</b>
       <TH  align="center" width="126">
@@ -915,8 +916,8 @@
    </TABLE>
 
   <BR>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;
-  <font size="5"><b>LOC/F</b><H>
-  <b><font size="5">P: <H>  </b>
+<b>LOC/F</b><H>
+  <b>P: <H>  </b>
 
   <!-- a button which the user will click to get the LOC/FP based on results the third table and the FP calculated
     -->
@@ -927,13 +928,13 @@
   <BR>
   </center>
 
-  <H2 align="left"> < size="6" ><b><i> Step 4:</i></b>
-  <b><font  size="3">  Final Step is to select complexity of the software project:</b> </H2>
+  <H2 align="left"><b><i> Step 4:</i></b>
+  <b>  Final Step is to select complexity of the software project:</b> </H2>
   <center>
   <!-- Creating the last table with its properties
        Here, the user will choose the type of software project he/she is developing.
     -->
-  <TABLE width="376">
+  <TABLE class="table table-striped" width="376">
     <TR>
       <TH  width="129"> <b>Software Project</b>
       <TH  width="35" align="center"> <b>a<sub>b</sub></b>
@@ -978,7 +979,7 @@
     <b> Software Development Methodology Factor</b> </H2>
     <center>
 
-      <TABLE width="376">
+      <TABLE class="table table-striped" width="376">
         <TR>
           <TH  width="129"> <b>Development Methodology</b>
           <TH  width="35" align="center"> <b>None</sub></b>
@@ -1024,16 +1025,16 @@
   <!-- a button which the user will click to get the final  caluclation of the Effort and the Duration of a software project
     -->
   <INPUT TYPE = "BUTTON" Name="calculate" VALUE = "Calculate Effort and Duration" onClick = "showE()">
-  <H> <font size="5">
+  <H>
   <BR><b>
-  <font size="5">Effort (E) = a<sub>b</sub>(KLOC)<sup>b</sup><sub>b</sub>
+Effort (E) = a<sub>b</sub>(KLOC)<sup>b</sup><sub>b</sub>
   =<H>
   </b>
   <!-- text boxes where the final results will be stored
    -->
   <INPUT TYPE = "TEXT" VALUE="" NAME = "Effort" size = 10 onfocus="return unfocus_Effort()"> &nbsp;&nbsp;&nbsp;&nbsp
 
-  <H>  <b><font  size="5">Duration (D) = c<sub>b</sub>(E)<sup>d</sup><sub>b</sub><sup><H></sup>
+  <H>  <b>Duration (D) = c<sub>b</sub>(E)<sup>d</sup><sub>b</sub><sup><H></sup>
   = </b> <INPUT TYPE = "TEXT" VALUE="" NAME = "Duration" size = 10 onfocus="return unfocus_Duration()">
   <BR><BR>
   <!-- a button which the user can click it to reset all fields on the form
