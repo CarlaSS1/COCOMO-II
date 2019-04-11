@@ -218,7 +218,7 @@
     function unfocus_Effort() { document.calculateForm.calculate.focus(); }
     function unfocus_Duration() { document.calculateForm.calculate.focus();}
 
-    // This function will calculate the function points based on the teh results form teh previous two tables
+    // This function will calculate the function points based on the the results form the previous two tables
     function showFP()
     {
          var totalfp = 0
@@ -253,22 +253,23 @@
         var type = 0
         showLOC();
         type = getValue(document.calculateForm.typeField)
+        method = getValue(document.calculateForm.typeField)
         if (type == 0) {  alert("We must select a project type.");}
-         else if (type == 1)
+         else if (type == 1 && method == 1)
               {
                  E = 2.4 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.05);
                  D = 2.5 * Math.pow(E,0.38);
                  document.calculateForm.Effort.value = roundOff(E, 2);
                  document.calculateForm.Duration.value = roundOff(D, 2);
               }
-              else  if (type == 2)
+              else  if (type == 2 && method == 2)
                     {
                     E = 3.0 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.12);
                     D = 2.5 * Math.pow(E,0.35);
                     document.calculateForm.Effort.value = roundOff(E, 2);
                     document.calculateForm.Duration.value = roundOff(D, 2);
                     }
-                    else if (type == 3)
+                    else if (type == 3 && method == 3)
                          {
                      E = 3.6 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.20);
                      D = 2.5 * Math.pow(E,0.32);
@@ -300,9 +301,9 @@
     -->
   <TABLE class="table table-striped">
     <TR>
-      <TH width="216" > Measurement Parameter
+      <TH  > Measurement Parameter
       <TH > Count
-      <TH width="37" > &nbsp;
+      <TH > &nbsp;
       <TH  > Simple
         <span >
            <INPUT TYPE = "RADIO" NAME = "FactorField" value="1" onFocus = "promptFactor()"
@@ -916,8 +917,6 @@
    </TABLE>
 
   <BR>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;
-<b>LOC/F</b><H>
-  <b>P: <H>  </b>
 
   <!-- a button which the user will click to get the LOC/FP based on results the third table and the FP calculated
     -->
@@ -982,35 +981,24 @@
       <TABLE class="table table-striped">
         <TR>
           <TH> <b>Development Methodology</b>
-          <TH > <b>None</b>
-          <TH > <b>Waterfall</b>
-          <TH > <b>Agile</b>
+          <TH > <b>Line of Code Multiplier</b>
           <TH > <b>Select</b>
 
         <TR>
-          <TD ><b></b>
+          <TD ><b>None</b>
             <TD ><b>2.4</b>
-            <TD ><b>1.05</b>
-            <TD ><b>2.5</b>
-            <TD ><b>0.38</b>
             <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
                 <INPUT TYPE = "RADIO" NAME = "typeField" value="1" onFocus = "promptType()" onBlur = "clearStatus()">
               </b>
 
-        <TR><TD ><b>S</b><b>emi-detached</b>
+        <TR><TD ><b>Waterfall Method</b>
             <TD ><b>3.0</b>
-            <TD ><b>1.12</b>
-            <TD ><b>2.5</b>
-            <TD ><b>0.35</b>
             <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
                 <INPUT TYPE = "RADIO" NAME = "typeField" value="2" onFocus = "promptType()" onBlur = "clearStatus()">
                </b>
 
-        <TR><TD ><b>E</b><b>mbedded</b>
+        <TR><TD ><b>Agile Method</b>
             <TD ><b>3.6</b>
-            <TD ><b>1.20</b>
-            <TD ><b>2.5</b>
-            <TD ><b>0.32</b>
             <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
                 <INPUT TYPE = "RADIO" NAME = "typeField" value="3" onFocus = "promptType()" onBlur = "clearStatus()">
               </b>
