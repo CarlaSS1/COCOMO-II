@@ -1,4 +1,2 @@
-# [COCOMO-II](https://rhildred.github.io/COCOMO-II/)
-
-A simulated COCOMO II model for project cost estimation.
+# Forked Repo from this GitHub https://github.com/rhildred/COCOMO-II
 
