@@ -934,20 +934,20 @@
   <!-- Creating the last table with its properties
        Here, the user will choose the type of software project he/she is developing.
     -->
-  <TABLE class="table table-striped" width="376">
+  <TABLE class="table table-striped">
     <TR>
-      <TH  width="129"> <b>Software Project</b>
-      <TH  width="35" align="center"> <b>a<sub>b</sub></b>
-      <TH  width="38" align="center"> <b>b<sub>b</sub></b>
-      <TH  width="34" align="center"> <b>c<sub>b</sub></b>
-      <TH  width="44" align="center"> <b>d<sub>b</sub></b>
-      <TH  width="56" align="center"> <b>Select</b>
-    <TR><TD width="129"><b>Organic</b>
-        <TD width="35" align="center"><b>2.4</b>
-        <TD width="38" align="center"><b>1.05</b>
-        <TD width="34" align="center"><b>2.5</b>
-        <TD width="44" align="center"><b>0.38</b>
-        <TD width="56"><b>&nbsp;&nbsp;&nbsp;&nbsp
+      <TH> <b>Software Project</b>
+      <TH> <b>a<sub>b</sub></b>
+      <TH> <b>b<sub>b</sub></b>
+      <TH> <b>c<sub>b</sub></b>
+      <TH> <b>d<sub>b</sub></b>
+      <TH> <b>Select</b>
+    <TR><TD ><b>Organic</b>
+        <TD ><b>2.4</b>
+        <TD ><b>1.05</b>
+        <TD ><b>2.5</b>
+        <TD ><b>0.38</b>
+        <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
             <INPUT TYPE = "RADIO" NAME = "typeField" value="1" onFocus = "promptType()" onBlur = "clearStatus()">
           </b>
 
@@ -1027,7 +1027,7 @@
     -->
   <INPUT class="btn btn-primary" TYPE = "BUTTON" Name="calculate" VALUE = "Calculate Effort and Duration" onClick = "showE()">
   <H>
-  <BR><b>
+  <BR><br><b>
 Effort (E) = a<sub>b</sub>(KLOC)<sup>b</sup><sub>b</sub>
   =<H>
   </b>
@@ -1040,7 +1040,7 @@ Effort (E) = a<sub>b</sub>(KLOC)<sup>b</sup><sub>b</sub>
   <BR><BR>
   <!-- a button which the user can click it to reset all fields on the form
     -->
-  <INPUT TYPE = "RESET"  Name="Reset" VALUE = "Reset Data"  onClick = "clearStatus()">
+  <INPUT class="btn btn-primary" TYPE = "RESET"  Name="Reset" VALUE = "Reset Data"  onClick = "clearStatus()">
 
   </FORM>
 <!--closing the body
