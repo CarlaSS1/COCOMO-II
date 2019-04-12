@@ -21,6 +21,7 @@
     function promptLanguage() { status = "Language";}
     function promptType() { status = "Type";}
     function promptMethod() { status = "Method";}
+    function promptProcedure() { status = "Procedure";}
     function promptQ1() { status = "Q1";}
     function promptQ2() { status = "Q2";}
     function promptQ3() { status = "Q3";}
@@ -253,11 +254,12 @@
         var D = 0
         var type = 0
         var method = 0
+        var procedure = 0
         showLOC();
         type = getValue(document.calculateForm.typeField);
         method = getValue(document.calculateForm.methodField);
-        console.log(method);
-        console.log(type);
+        procedure = getValue(document.calculateForm.procedureField);
+
         if (type == 0) {  alert("We must select a project type.");}
          else if (type == 1)
               {
@@ -278,6 +280,7 @@
 
                     }
 
+            //Methodology LOC Multiplier
               if (method == 0) {  alert("We must select a Methodology.");}
               else if (method == 1){
                 document.calculateForm.Effort.value = roundOff(E*2.0, 2);
@@ -289,6 +292,25 @@
                 document.calculateForm.Effort.value = roundOff(E*1.5, 2);
               }
 
+              //Procedure LOC Multiplier
+              if (procedure == 0) {  alert("We must select a Procedural Generation.");}
+              else if (procedure == 1){
+                document.calculateForm.Effort.value = roundOff(E*1.00, 2);
+              }
+              else if (procedure == 2){
+                document.calculateForm.Effort.value = roundOff(E*1.07, 2);
+              }
+              else if (procedure == 3){
+                document.calculateForm.Effort.value = roundOff(E*1.54, 2);
+              }
+              else if (procedure == 4){
+                document.calculateForm.Effort.value = roundOff(E*1.76, 2);
+              }
+              else if (procedure == 5){
+                document.calculateForm.Effort.value = roundOff(E*3.60, 2);
+              }
+
+              
                document.calculateForm.Duration.value = roundOff(D, 2);
 
         document.calculateForm.Reset.focus();
@@ -1005,6 +1027,7 @@
 
     <H2 align="left"><b><i>Additional Factors</i></b></h2><br>
     <h3> <b> Software Development Methodology Factor</b> </h3><br>
+    <h2> Made By: Andrew Panko 000394436 </h2><br>
     <h4> <b>How the developing method on the project effects the amount of lines needed for code</b> </h4><br>
     <center>
 
@@ -1036,6 +1059,43 @@
          -->
        </TABLE>
       <BR>&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <!-- SECOND FUNCTION -->
+       </TABLE>
+       <BR>&nbsp;&nbsp;&nbsp;&nbsp;
+
+       <h3> <b>Procedural Generation Factor</b> </h3><br>
+       <center>
+
+         <TABLE class="table table-striped">
+           <TR>
+               <TH> <b>None x(1.00)</b>
+                 <TH> <b>Simple (x 1.07)</b>
+                   <TH> <b>Standard (x 1.54)</b>
+                     <TH> <b>Advanced (x 1.76)</b>
+                       <TH>  <b>Complex (x 3.60)</b>
+
+           <TR>
+             <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                 <INPUT TYPE = "RADIO" NAME = "procedureField" value="1" onFocus = "promptProcedure()" onBlur = "clearStatus()">
+               </b>
+               <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                   <INPUT TYPE = "RADIO" NAME = "procedureField" value="2" onFocus = "promptProcedure()" onBlur = "clearStatus()">
+                 </b>
+                 <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                     <INPUT TYPE = "RADIO" NAME = "procedureField" value="3" onFocus = "promptProcedure()" onBlur = "clearStatus()">
+                   </b>
+                   <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                       <INPUT TYPE = "RADIO" NAME = "procedureField" value="4" onFocus = "promptProcedure()" onBlur = "clearStatus()">
+                     </b>
+                     <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                         <INPUT TYPE = "RADIO" NAME = "procedureField" value="5" onFocus = "promptProcedure()" onBlur = "clearStatus()">
+                       </b>
+
+          <!-- closing the last table.
+            -->
+          </TABLE>
+         <BR>&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 
