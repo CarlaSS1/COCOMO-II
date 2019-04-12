@@ -263,7 +263,7 @@
         type = getValue(document.calculateForm.typeField);
         method = getValue(document.calculateForm.methodField);
         procedure = getValue(document.calculateForm.procedureField);
-        experience = $('#experienceOfWorker').value;
+        experience = document.calculateForm.experienceOfWorker.value;
         console.log(experience);
         if (type == 0) {  alert("We must select a project type.");}
          else if (type == 1)
@@ -1141,7 +1141,7 @@
               <div class="panel-heading">The experience of worker(s) effects the duration of the project</div>
               <div class="panel-body">
                 How comfortable are you with the programming language for this project (Rate from 1-5, 1 being Not at all, 5 being Fully capable)?:
-                <INPUT TYPE = "Number" NAME = "experienceOfWorker" id = "experienceOfWorker" size = 10 onFocus = "promptExperience()">
+                <INPUT TYPE = "Number" NAME = "experienceOfWorker" size = 10 onfocus="return unfocus_Experience()">
                   <br>
                   Time that will be dedicated to this project in a week? (In hours):
                   <INPUT TYPE = "Number" NAME = "ExperienceTime" size = 10>
