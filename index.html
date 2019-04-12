@@ -320,56 +320,56 @@
 
             //Methodology LOC Multiplier
 
-              else if (method == 1){
+              if (method == 1){
                 document.calculateForm.Effort.value = roundOff(E*2.0, 2);
               }
-              else if (method == 2){
+              if (method == 2){
                 document.calculateForm.Effort.value = roundOff(E*1.0, 2);
               }
-              else if (method == 3){
+              if (method == 3){
                 document.calculateForm.Effort.value = roundOff(E*1.5, 2);
               }
 
               //Procedure LOC Multiplier
-              else if (procedure == 1){
+              if (procedure == 1){
                 document.calculateForm.Effort.value = roundOff(E*1.00, 2);
               }
-              else if (procedure == 2){
+              if (procedure == 2){
                 document.calculateForm.Effort.value = roundOff(E*1.07, 2);
               }
-              else if (procedure == 3){
+              if (procedure == 3){
                 document.calculateForm.Effort.value = roundOff(E*1.54, 2);
               }
-              else if (procedure == 4){
+              if (procedure == 4){
                 document.calculateForm.Effort.value = roundOff(E*1.76, 2);
               }
-              else if (procedure == 5){
+              if (procedure == 5){
                 document.calculateForm.Effort.value = roundOff(E*3.60, 2);
               }
 
               //Experience Duration Multiplier
-              else if (experience == 1){
+              if (experience == 1){
                 document.calculateForm.Duration.value = roundOff(D*2.0, 2);
               }
 
-              else if (experience == 2){
+              if (experience == 2){
                 document.calculateForm.Duration.value = roundOff(D*1.8, 2);
               }
 
-              else if (experience == 3){
+              if (experience == 3){
                 document.calculateForm.Duration.value = roundOff(D*1.4, 2);
               }
 
-              else if (experience == 4){
+              if (experience == 4){
                 document.calculateForm.Duration.value = roundOff(D*0.8, 2);
               }
 
-              else if (experience == 5){
+              if (experience == 5){
                 document.calculateForm.Duration.value = roundOff(D*0.5, 2);
               }
 
               //Amount of Workers Factor
-              else if (quantity == 1){
+              if (quantity == 1){
                 document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
