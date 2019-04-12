@@ -247,6 +247,7 @@
                 loc = language * Number(document.calculateForm.fpTotal.value);
                 // store result in the LOCTotal text box.
                 document.calculateForm.LOCTotal.value = roundOff(loc, 2);
+                document.calculateForm.LOCTotal2.value = roundOff(loc, 2);
             }
     }
     //  This fucntion will take the LOC which was calculated in previous step and divided it by 1000 and then
@@ -340,43 +341,43 @@
               }
 
               if (quantity == 1){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
               else if (quantity == 2){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
               else if (quantity == 3){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
               else if (quantity == 4){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
               else if (quantity == 5){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
               else if (quantity == 6){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
               else if (quantity == 7){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
               else if (quantity == 8){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
               else if (quantity == 9){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
               else if (quantity == 10){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
         document.calculateForm.Reset.focus();
@@ -1198,7 +1199,7 @@
              <div class="panel-heading">The quantity of worker(s) effects the duration of the project and effort of the project</div>
              <div class="panel-body">
                Average amount of lines / Function Point:
-               <INPUT TYPE = "TEXT" value ="" NAME = "LOCTotal" onfocus="return unfocus_LOCTotal()" size = 10>
+               <INPUT TYPE = "TEXT" value ="" NAME = "LOCTotal2" onfocus="return unfocus_LOCTotal()" size = 10>
                  <br>
                Amount of Workers:
                <INPUT TYPE = "Number" NAME = "quantityOfWorkers" size = 10 onfocus="return unfocus_Quantity()">
