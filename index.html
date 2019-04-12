@@ -10,7 +10,6 @@
 
 <BODY BGCOLOR = "#FFFFCC">
   <center>
-  <div> <h3 text-align: "center">SiCOMO : The Simulated COCOMO  (By: Andrew, Carla, Christian, Andres, Brian)</h3></div><br>
   <div class="jumbotron">
     <h1>SiCOMO : The Simulated COCOMO  </h1>
     <p>Creators: Andrew, Carla, Christian, Andres, Brian</p>
@@ -309,8 +308,8 @@
                     }
 
             //Methodology LOC Multiplier
-              if (method == 0) {  alert("We must select a Methodology.");}
-              else if (method == 1){
+
+              if (method == 1){
                 document.calculateForm.Effort.value = roundOff(E*2.0, 2);
               }
               else if (method == 2){
@@ -359,6 +358,7 @@
                 document.calculateForm.Duration.value = roundOff(D*0.5, 2);
               }
 
+              //Amount of Workers Factor
               if (quantity == 1){
                 document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
@@ -399,6 +399,7 @@
                 document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
               }
 
+              //Documentation Factor
               if (q1 == 1){
                 total = total + 1;
               }
@@ -1159,7 +1160,7 @@
     <H2 align="left"><b><i>Additional Factors</i></b></h2><br>
     <h3> <b> Software Development Methodology Factor</b> </h3><br>
     <h4> Made By: Andrew Panko, 000394436 </h2><br>
-    <h3> <b>How the developing method on the project effects the amount of lines needed for code and ultimately the effort</b> </h3><br>
+    <h3> How the developing method on the project effects the amount of lines needed for code and ultimately the effort </h3><br>
     <center>
 
       <TABLE class="table table-striped">
@@ -1233,45 +1234,45 @@
          <BR>&nbsp;&nbsp;&nbsp;&nbsp;
 
            <!-- Third FUNCTION -->
+<h2><b>Developer Experience Factor</b></h2>
 
-          <h2> Made By: Carla Sison, 000397812 </h2><br>
           <center>
 
             <div class="container">
-            <h2>Developer Experience Factor</h2>
+            <h4> Made By: Carla Sison, 000397812 </h4><br>
             <div class="panel panel-default">
               <div class="panel-heading">The experience of worker(s) effects the duration of the project</div>
               <div class="panel-body">
                 How comfortable are you with the programming language for this project (Rate from 1-5, 1 being Not at all, 5 being Fully capable)?:
-                <INPUT TYPE = "Number" NAME = "experienceOfWorker" size = 10 >
+                <INPUT TYPE = "Number" NAME = "experienceOfWorker" size = 10 onBlur = "clearStatus()">
                   <br>
                   Time that will be dedicated to this project in a week? (In hours):
-                  <INPUT TYPE = "Number" NAME = "ExperienceTime" size = 10>
+                  <INPUT TYPE = "Number" NAME = "ExperienceTime" size = 10 onBlur = "clearStatus()">
                     <br>
               </div>
             </div>
           </div>
 
           <!-- Forth FUNCTION -->
+<h2><b>Amount of Workers Factor</b></h2>
 
-         <h4> Made By: Andres Acevedo, 000088776</h2><br>
          <center>
 
            <div class="container">
-           <h2>Amount of Workers Factor</h2>
+            <h4> Made By: Andres Acevedo, 000088776</h2><br>
            <div class="panel panel-default">
              <div class="panel-heading">The quantity of worker(s) effects the duration of the project and effort of the project</div>
              <div class="panel-body">
                Average amount of lines / Function Point:
-               <INPUT TYPE = "TEXT" value ="" NAME = "LOCTotal2" onfocus="return unfocus_LOCTotal()" size = 10>
+               <INPUT TYPE = "TEXT" value ="" NAME = "LOCTotal2" onfocus="return unfocus_LOCTotal()" size = 10 onBlur = "clearStatus()">
                  <br>
                  <br>
                Amount of Workers:
-               <INPUT TYPE = "Number" NAME = "quantityOfWorkers" size = 10>
+               <INPUT TYPE = "Number" NAME = "quantityOfWorkers" size = 10 onBlur = "clearStatus()">
                  <br>
                  <br>
                  Average amount of lines per worker:
-                 <INPUT TYPE = "TEXT" value ="" NAME = "avgLines" size = 10>
+                 <INPUT TYPE = "TEXT" value ="" NAME = "avgLines" size = 10 onBlur = "clearStatus()">
                    <br>
              </div>
            </div>
@@ -1279,7 +1280,7 @@
 
          <h3> <b> Documentation Protocol Factor</b> </h3><br>
          <h4> Made By: Brian, 000228103</h2><br>
-         <h3> <b>How having a plan of tasks to follow can effect duration and effort</b> </h3><br>
+         <h3> How having a plan of tasks to follow can effect duration and effort </h3><br>
          <center>
 
            <TABLE class="table table-striped">
