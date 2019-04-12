@@ -303,18 +303,21 @@
               {
                  E = 2.4 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.05);
                  D = 2.5 * Math.pow(E,0.38);
+                 document.calculateForm.Effort.value = roundOff(E*1.0, 2);
 
               }
               else  if (type == 2)
                     {
                       E = 3.0 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.12);
                       D = 2.5 * Math.pow(E,0.35);
+                      document.calculateForm.Effort.value = roundOff(E*1.0, 2);
 
                     }
                     else if (type == 3)
                     {
                        E = 3.6 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.20);
                        D = 2.5 * Math.pow(E,0.32);
+                       document.calculateForm.Effort.value = roundOff(E, 2);
 
                     }
 
