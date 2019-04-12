@@ -222,6 +222,7 @@
     function unfocus_Effort() { document.calculateForm.calculate.focus(); }
     function unfocus_Duration() { document.calculateForm.calculate.focus();}
     function unfocus_Experience() { document.calculateForm.calculate.focus();}
+    function unfocus_Qauntity() { document.calculateForm.calculate.focus();}
 
     // This function will calculate the function points based on the the results form the previous two tables
     function showFP()
@@ -259,11 +260,13 @@
         var method = 0
         var procedure = 0
         var experience = 0
+        var qauntity = 0
         showLOC();
         type = getValue(document.calculateForm.typeField);
         method = getValue(document.calculateForm.methodField);
         procedure = getValue(document.calculateForm.procedureField);
         experience = document.calculateForm.experienceOfWorker.value;
+        quantity = document.calculateForm.quantityOfWorkers.value;
         console.log(experience);
         if (type == 0) {  alert("We must select a project type.");}
          else if (type == 1)
@@ -336,6 +339,45 @@
                 document.calculateForm.Duration.value = roundOff(D*0.5, 2);
               }
 
+              if (quantity == 1){
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+              }
+
+              else if (quantity == 2){
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+              }
+
+              else if (quantity == 3){
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+              }
+
+              else if (quantity == 4){
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+              }
+
+              else if (quantity == 5){
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+              }
+
+              else if (quantity == 6){
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+              }
+
+              else if (quantity == 7){
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+              }
+
+              else if (quantity == 8){
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+              }
+
+              else if (quantity == 9){
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+              }
+
+              else if (quantity == 10){
+                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal.value / quantity);
+              }
 
         document.calculateForm.Reset.focus();
     }
@@ -1126,13 +1168,8 @@
          <BR>&nbsp;&nbsp;&nbsp;&nbsp;
 
            <!-- Third FUNCTION -->
-         </TABLE>
-        <BR>&nbsp;&nbsp;&nbsp;&nbsp;
 
-          <H2 align="left"><b><i>Additional Factors</i></b></h2><br>
-          <h3> <b> Software Development Methodology Factor</b> </h3><br>
-          <h2> Made By: Andrew Panko 000394436 </h2><br>
-          <h4> <b>How the developing method on the project effects the amount of lines needed for code</b> </h4><br>
+          <h2> Made By: Carla 000397812 </h2><br>
           <center>
 
             <div class="container">
@@ -1149,6 +1186,30 @@
               </div>
             </div>
           </div>
+
+          <!-- Forth FUNCTION -->
+
+         <h2> Made By: Brian 000228103 </h2><br>
+         <center>
+
+           <div class="container">
+           <h2>Amount of Workers Factor</h2>
+           <div class="panel panel-default">
+             <div class="panel-heading">The quantity of worker(s) effects the duration of the project and effort of the project</div>
+             <div class="panel-body">
+               Average amount of lines / Function Point:
+               <INPUT TYPE = "TEXT" value ="" NAME = "LOCTotal" size = 10>
+                 <br>
+               Amount of Workers:
+               <INPUT TYPE = "Number" NAME = "quantityOfWorkers" size = 10 onfocus="return unfocus_Quantity()">
+                 <br>
+                 Average amount of lines per worker:
+                 <INPUT TYPE = "TEXT" value ="" NAME = "avgLines" size = 10>
+                   <br>
+             </div>
+           </div>
+         </div>
+
 
   <!-- a button which the user will click to get the final  caluclation of the Effort and the Duration of a software project
     -->
