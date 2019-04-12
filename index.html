@@ -319,7 +319,7 @@
                     }
 
             //Methodology LOC Multiplier
-
+            if(method != 0){
               if (method == 1){
                 document.calculateForm.Effort.value = roundOff(E*2.0, 2);
               }
@@ -330,130 +330,144 @@
                 document.calculateForm.Effort.value = roundOff(E*1.5, 2);
               }
 
+            }
+
               //Procedure LOC Multiplier
-              if (procedure == 1){
-                document.calculateForm.Effort.value = roundOff(E*1.00, 2);
+              if (procedure != 0){
+                if (procedure == 1){
+                  document.calculateForm.Effort.value = roundOff(E*1.00, 2);
+                }
+                if (procedure == 2){
+                  document.calculateForm.Effort.value = roundOff(E*1.07, 2);
+                }
+                if (procedure == 3){
+                  document.calculateForm.Effort.value = roundOff(E*1.54, 2);
+                }
+                if (procedure == 4){
+                  document.calculateForm.Effort.value = roundOff(E*1.76, 2);
+                }
+                if (procedure == 5){
+                  document.calculateForm.Effort.value = roundOff(E*3.60, 2);
+                }
               }
-              if (procedure == 2){
-                document.calculateForm.Effort.value = roundOff(E*1.07, 2);
-              }
-              if (procedure == 3){
-                document.calculateForm.Effort.value = roundOff(E*1.54, 2);
-              }
-              if (procedure == 4){
-                document.calculateForm.Effort.value = roundOff(E*1.76, 2);
-              }
-              if (procedure == 5){
-                document.calculateForm.Effort.value = roundOff(E*3.60, 2);
-              }
+
 
               //Experience Duration Multiplier
-              if (experience == 1){
-                document.calculateForm.Duration.value = roundOff(D*2.0, 2);
+              if (experience != 0){
+                if (experience == 1){
+                  document.calculateForm.Duration.value = roundOff(D*2.0, 2);
+                }
+
+                if (experience == 2){
+                  document.calculateForm.Duration.value = roundOff(D*1.8, 2);
+                }
+
+                if (experience == 3){
+                  document.calculateForm.Duration.value = roundOff(D*1.4, 2);
+                }
+
+                if (experience == 4){
+                  document.calculateForm.Duration.value = roundOff(D*0.8, 2);
+                }
+
+                if (experience == 5){
+                  document.calculateForm.Duration.value = roundOff(D*0.5, 2);
+                }
               }
 
-              if (experience == 2){
-                document.calculateForm.Duration.value = roundOff(D*1.8, 2);
-              }
-
-              if (experience == 3){
-                document.calculateForm.Duration.value = roundOff(D*1.4, 2);
-              }
-
-              if (experience == 4){
-                document.calculateForm.Duration.value = roundOff(D*0.8, 2);
-              }
-
-              if (experience == 5){
-                document.calculateForm.Duration.value = roundOff(D*0.5, 2);
-              }
 
               //Amount of Workers Factor
-              if (quantity == 1){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+              if (quantity !=0){
+                if (quantity == 1){
+                  document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+                }
+
+                else if (quantity == 2){
+                  document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+                }
+
+                else if (quantity == 3){
+                  document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+                }
+
+                else if (quantity == 4){
+                  document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+                }
+
+                else if (quantity == 5){
+                  document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+                }
+
+                else if (quantity == 6){
+                  document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+                }
+
+                else if (quantity == 7){
+                  document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+                }
+
+                else if (quantity == 8){
+                  document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+                }
+
+                else if (quantity == 9){
+                  document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+                }
+
+                else if (quantity == 10){
+                  document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+                }
               }
 
-              else if (quantity == 2){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
-              }
 
-              else if (quantity == 3){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
-              }
+              if(q1 != 0){
+                if (q1 == 1){
+                  total = total + 1;
+                }
+                else if (q1 == 2){
+                  total = total + 2;
+                }
 
-              else if (quantity == 4){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
-              }
+                if (q2 == 1){
+                  total = total + 1;
+                }
+                else if (q2 == 2){
+                  total = total + 2;
+                }
 
-              else if (quantity == 5){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
-              }
+                if (q3 == 1){
+                  total = total + 1;
+                }
+                else if (q3 == 2){
+                  total = total + 2;
+                }
 
-              else if (quantity == 6){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
-              }
+                if (q4 == 1){
+                  total = total + 1;
+                }
+                else if (q4 == 2){
+                  total = total + 2;
+                }
 
-              else if (quantity == 7){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
-              }
+                if (q5 == 1){
+                  total = total + 1;
+                }
+                else if (q5 == 2){
+                  total = total + 2;
+                }
 
-              else if (quantity == 8){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
-              }
+                if (total>=7){
+                  document.calculateForm.Duration.value = roundOff(D*0.9, 2);
+                  document.calculateForm.Effort.value = roundOff(E*1.1, 2);
+                }
 
-              else if (quantity == 9){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+                else if (total < 7){
+                  document.calculateForm.Duration.value = roundOff(D*1.1, 2);
+                  document.calculateForm.Effort.value = roundOff(E*0.9, 2);
+                }
               }
-
-              else if (quantity == 10){
-                document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
-              }
-
               //Documentation Factor
-              if (q1 == 1){
-                total = total + 1;
-              }
-              else if (q1 == 2){
-                total = total + 2;
-              }
 
-              if (q2 == 1){
-                total = total + 1;
-              }
-              else if (q2 == 2){
-                total = total + 2;
-              }
-
-              if (q3 == 1){
-                total = total + 1;
-              }
-              else if (q3 == 2){
-                total = total + 2;
-              }
-
-              if (q4 == 1){
-                total = total + 1;
-              }
-              else if (q4 == 2){
-                total = total + 2;
-              }
-
-              if (q5 == 1){
-                total = total + 1;
-              }
-              else if (q5 == 2){
-                total = total + 2;
-              }
-
-              if (total>=7){
-                document.calculateForm.Duration.value = roundOff(D*0.9, 2);
-                document.calculateForm.Effort.value = roundOff(E*1.1, 2);
-              }
-
-              else if (total < 7){
-                document.calculateForm.Duration.value = roundOff(D*1.1, 2);
-                document.calculateForm.Effort.value = roundOff(E*0.9, 2);
-              }
 
         document.calculateForm.Reset.focus();
     }
