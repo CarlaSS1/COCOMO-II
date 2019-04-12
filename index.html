@@ -253,8 +253,8 @@
         var type = 0
         showLOC();
         type = getValue(document.calculateForm.typeField)
-        method = getValue(document.calculateForm.typeField)
-        if (type == 0) {  alert("We must select a project type.");}
+        method = getValue(document.calculateForm.methodField)
+        if (type == 0 || method == 0) {  alert("We must select a project type.");}
          else if (type == 1 && method == 1)
               {
                  E = 2.4 * Math.pow(((Number(document.calculateForm.LOCTotal.value)/1000)*0.5),1.05);
