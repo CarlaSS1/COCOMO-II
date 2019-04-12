@@ -257,28 +257,40 @@
         type = getValue(document.calculateForm.typeField);
         method = getValue(document.calculateForm.methodField);
         console.log(method);
-        if (type == 0 || method == 0) {  alert("We must select a project type.");}
-         else if (type == 1 && method == 1)
+        console.log(type);
+        if (type == 0) {  alert("We must select a project type.");}
+         else if (type == 1)
               {
-                 E = 2.4 * Math.pow(((Number(document.calculateForm.LOCTotal.value)/1000)*2.0),1.05);
+                 E = 2.4 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.05);
                  D = 2.5 * Math.pow(E,0.38);
-                 document.calculateForm.Effort.value = roundOff(E, 2);
-                 document.calculateForm.Duration.value = roundOff(D, 2);
+
               }
-              else  if (type == 2 && method == 2)
+              else  if (type == 2)
                     {
-                    E = 3.0 * Math.pow(((Number(document.calculateForm.LOCTotal.value)/1000)*1),1.12);
-                    D = 2.5 * Math.pow(E,0.35);
-                    document.calculateForm.Effort.value = roundOff(E, 2);
-                    document.calculateForm.Duration.value = roundOff(D, 2);
+                      E = 3.0 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.12);
+                      D = 2.5 * Math.pow(E,0.35);
+
                     }
-                    else if (type == 3 && method == 3)
-                         {
-                     E = 3.6 * Math.pow(((Number(document.calculateForm.LOCTotal.value)/1000)*1.5),1.20);
-                     D = 2.5 * Math.pow(E,0.32);
-                     document.calculateForm.Effort.value = roundOff(E, 2);
-                     document.calculateForm.Duration.value = roundOff(D, 2);
-                         }
+                    else if (type == 3)
+                    {
+                       E = 3.6 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.20);
+                       D = 2.5 * Math.pow(E,0.32);
+
+                    }
+
+              if (method == 0) {  alert("We must select a Methodology.");}
+              else if (method == 1){
+                document.calculateForm.Effort.value = roundOff(E*2.0, 2);
+              }
+              else if (method == 2){
+                document.calculateForm.Effort.value = roundOff(E*1.0, 2);
+              }
+              else if (method == 3){
+                document.calculateForm.Effort.value = roundOff(E*1.5, 2);
+              }
+
+               document.calculateForm.Duration.value = roundOff(D, 2);
+
         document.calculateForm.Reset.focus();
     }
 
