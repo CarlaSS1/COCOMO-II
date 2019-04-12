@@ -20,6 +20,7 @@
     function promptFactor() { status = "Factor";}
     function promptLanguage() { status = "Language";}
     function promptType() { status = "Type";}
+    function promptMethod() { status = "Method";}
     function promptQ1() { status = "Q1";}
     function promptQ2() { status = "Q2";}
     function promptQ3() { status = "Q3";}
@@ -253,8 +254,9 @@
         var type = 0
         var method = 0
         showLOC();
-        type = getValue(document.calculateForm.typeField)
-        method = getValue(document.calculateForm.methodField)
+        type = getValue(document.calculateForm.typeField);
+        method = getValue(document.calculateForm.methodField);
+        console.log(method);
         if (type == 0 || method == 0) {  alert("We must select a project type.");}
          else if (type == 1 && method == 1)
               {
