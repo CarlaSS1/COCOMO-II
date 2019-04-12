@@ -22,6 +22,7 @@
     function promptType() { status = "Type";}
     function promptMethod() { status = "Method";}
     function promptProcedure() { status = "Procedure";}
+    function promptExperience() { status = "Experience";}
     function promptQ1() { status = "Q1";}
     function promptQ2() { status = "Q2";}
     function promptQ3() { status = "Q3";}
@@ -1139,7 +1140,7 @@
               <div class="panel-heading">The experience of worker(s) effects the duration of the project</div>
               <div class="panel-body">
                 How comfortable are you with the programming language for this project (Rate from 1-5, 1 being Not at all, 5 being Fully capable)?:
-                <INPUT TYPE = "TEXT" VALUE="" NAME = "Experience" size = 10>
+                <INPUT TYPE = "TEXT" VALUE="" NAME = "Experience" size = 10 onFocus = "promptExperience()">
                   <br>
                   Time that will be dedicated to this project in a week? (In hours):
                   <INPUT TYPE = "TEXT" VALUE="" NAME = "ExperienceTime" size = 10>
