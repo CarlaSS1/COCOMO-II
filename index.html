@@ -9,7 +9,7 @@
 
 <BODY BGCOLOR = "#FFFFCC">
   <center>
-  <div> <h1 text-align: "center">SiCOMO : The Simulated COCOMO  (By: Andrew, Carla, Christian, Andres, Brian)</h1></div>
+  <div> <h3 text-align: "center">SiCOMO : The Simulated COCOMO  (By: Andrew, Carla, Christian, Andres, Brian)</h3></div><br>
   <SCRIPT LANGUAGE = "JavaScript">
   <!--
     //    document.write("<HR>");
@@ -257,21 +257,21 @@
         if (type == 0) {  alert("We must select a project type.");}
          else if (type == 1 && method == 1)
               {
-                 E = 2.4 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.05);
+                 E = 2.4 * Math.pow(((Number(document.calculateForm.LOCTotal.value)/1000)*0.5),1.05);
                  D = 2.5 * Math.pow(E,0.38);
                  document.calculateForm.Effort.value = roundOff(E, 2);
                  document.calculateForm.Duration.value = roundOff(D, 2);
               }
               else  if (type == 2 && method == 2)
                     {
-                    E = 3.0 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.12);
+                    E = 3.0 * Math.pow(((Number(document.calculateForm.LOCTotal.value)/1000)*1),1.12);
                     D = 2.5 * Math.pow(E,0.35);
                     document.calculateForm.Effort.value = roundOff(E, 2);
                     document.calculateForm.Duration.value = roundOff(D, 2);
                     }
                     else if (type == 3 && method == 3)
                          {
-                     E = 3.6 * Math.pow((Number(document.calculateForm.LOCTotal.value)/1000),1.20);
+                     E = 3.6 * Math.pow(((Number(document.calculateForm.LOCTotal.value)/1000)*1.5),1.20);
                      D = 2.5 * Math.pow(E,0.32);
                      document.calculateForm.Effort.value = roundOff(E, 2);
                      document.calculateForm.Duration.value = roundOff(D, 2);
@@ -320,7 +320,7 @@
       <TH > &nbsp;
       <TH > Total
 
-    <TR><TD width="216"  align="left">
+    <TR><TD   align="left">
         <b>&nbsp;Number of user inputs</b>
         <TD  align="center"><b>
          <INPUT TYPE = "TEXT" NAME = "inputs" value="" size = 5 onFocus = "promptFactor()"
@@ -335,7 +335,7 @@
            <INPUT TYPE = "TEXT" NAME = "tinputs" value="" size = 5 onfocus="return unfocus_tinputs()">
            </b>
 
-    <TR><TD width="216"  align="left"><b>&nbsp;
+    <TR><TD   align="left"><b>&nbsp;
         Number of user outputs</b>
         <TD  align="center"><b>
           <INPUT TYPE = "TEXT" NAME = "outputs" value="" size = 5 onFocus = "promptFactor()"
@@ -351,7 +351,7 @@
           </b>
 
     <TR>
-      <TD width="216"  align="left"><b>&nbsp;Number of user inquiries</b>
+      <TD  align="left"><b>&nbsp;Number of user inquiries</b>
         <TD  align="center"><b>
           <INPUT TYPE = "TEXT" NAME = "inquiries" value="" size = 5 onFocus = "promptFactor()"
 	    onBlur = "clearStatus()">
@@ -365,7 +365,7 @@
           <INPUT TYPE = "TEXT" NAME = "tinquiries" value="" size = 5 onfocus="return unfocus_tinquiries()">
           </b>
 
-    <TR><TD width="216"  align="left"><b>&nbsp;
+    <TR><TD align="left"><b>&nbsp;
         Number of files</b>
         <TD  align="center"><b>
           <INPUT TYPE = "TEXT" NAME = "files" value="" size = 5 onFocus = "promptFactor()"
@@ -380,7 +380,7 @@
           <INPUT TYPE = "TEXT" NAME = "tfiles" value="" size = 5 onfocus="return unfocus_tfiles()">
           </b>
 
-    <TR><TD width="216"  align="left"><b>&nbsp;
+    <TR><TD align="left"><b>&nbsp;
         Number of external interfaces</b>
         <TD  align="center"><b>
           <INPUT TYPE = "TEXT" NAME = "interfaces" value="" size = 5 onFocus = "promptFactor()"
@@ -395,7 +395,7 @@
           <INPUT TYPE = "TEXT" NAME = "tinterfaces" value="" size = 5 onfocus="return unfocus_tinterfaces()">
           </b>
 
-    <TR><TD width="216"  align="left"><b>&nbsp;
+    <TR><TD align="left"><b>&nbsp;
         Count=Total</b>
         <TD  align="center">
         <TD align="center">
@@ -833,7 +833,7 @@
        Here is a list of languages and LOC assoicated with it.
     -->
   <center>
-    <TABLE class="table table-striped" width="471">
+    <TABLE class="table table-striped">
     <TR>
       <TH> <b>Programming Language</b>
       <TH  >
@@ -842,73 +842,73 @@
            <b>Select</b>
 
     <TR><TD ><b>&nbsp; Assembly Language</b>
-        <TD  ><b>320</b>
-        <TD >
+        <TD  ><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;320</b>
+        <TD >&nbsp;&nbsp;&nbsp;&nbsp
           <b><INPUT TYPE = "RADIO" NAME = "LanguageField" value="320" onFocus = "promptLanguage()"
              onBlur = "clearStatus()">
           </b>
 
     <TR><TD ><b>&nbsp; C</b>
-        <TD ><b>128</b>
+        <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;128</b>
         <TD ><b>
          <INPUT TYPE = "RADIO" NAME = "LanguageField" value="320" onFocus = "promptLanguage()"
             	   onBlur = "clearStatus()">
           </b>
     <TR><TD ><b>&nbsp; COBOL</b>
-        <TD  ><b>105</b>
-        <TD  ><b>
+        <TD  ><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;105</b>
+        <TD  ><b>&nbsp;&nbsp;&nbsp;&nbsp
           <INPUT TYPE = "RADIO" NAME = "LanguageField" value="105" onFocus = "promptLanguage()"
             	   onBlur = "clearStatus()">
           </b>
 
     <TR><TD ><b>&nbsp; Fortran</b>
-       <TD  ><b>105</b>
-        <TD ><b>
+       <TD  ><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;105</b>
+        <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
           <INPUT TYPE = "RADIO" NAME = "LanguageField" value="105" onFocus = "promptLanguage()"
             	   onBlur = "clearStatus()">
           </b>
     <TR><TD ><b>&nbsp; Pascal</b>
-        <TD ><b>90</b>
-        <TD  ><b>
+        <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;90</b>
+        <TD  ><b>&nbsp;&nbsp;&nbsp;&nbsp
            <INPUT TYPE = "RADIO" NAME = "LanguageField" value="90" onFocus = "promptLanguage()"
             	   onBlur = "clearStatus()">
           </b>
 
     <TR><TD ><b>&nbsp; Ada</b>
-        <TD  ><b>70</b>
-        <TD ><b>
+        <TD  ><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;70</b>
+        <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
            <INPUT TYPE = "RADIO" NAME = "LanguageField" value="70" onFocus = "promptLanguage()"
             	   onBlur = "clearStatus()">
           </b>
     <TR><TD ><b>&nbsp; Object-Oriented Languages</b>
-        <TD ><b>30</b>
-        <TD ><b>
+        <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30</b>
+        <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
               <INPUT TYPE = "RADIO" NAME = "LanguageField" value="30" onFocus = "promptLanguage()"
             	   onBlur = "clearStatus()">
           </b>
 
     <TR><TD ><b>&nbsp; Fourth Generation Languages (4GLs)</b>
-       <TD  ><b>20</b>
-        <TD a ><b>
+       <TD  ><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20</b>
+        <TD a ><b>&nbsp;&nbsp;&nbsp;&nbsp
            <INPUT TYPE = "RADIO" NAME = "LanguageField" value="20" onFocus = "promptLanguage()"
             	   onBlur = "clearStatus()">
           </b>
     <TR><TD ><b>&nbsp; Code Generators</b>
-        <TD  ><b>15</b>
-        <TD ><b>
+        <TD  ><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15</b>
+        <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
            <INPUT TYPE = "RADIO" NAME = "LanguageField" value="15" onFocus = "promptLanguage()"
             	   onBlur = "clearStatus()">
           </b>
     <TR><TD ><b>&nbsp; Spreadsheets</b>
-        <TD ><b>6</b>
-        <TD ><b>
+        <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6</b>
+        <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
            <INPUT TYPE = "RADIO" NAME = "LanguageField" value="6" onFocus = "promptLanguage()"
             	   onBlur = "clearStatus()">
           </b>
 
     <TR><TD ><b>&nbsp; Graphical Languages (icons)</b>
-       <TD ><b>4</b>
-        <TD ><b>
+       <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</b>
+        <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
              <INPUT TYPE = "RADIO" NAME = "LanguageField" value="4" onFocus = "promptLanguage()"
             	   onBlur = "clearStatus()">
           </b>
@@ -993,7 +993,7 @@
               </b>
 
         <TR><TD><b>Waterfall Method</b>
-            <TD><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.5</b>
+            <TD><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.0</b>
             <TD><b>&nbsp;&nbsp;&nbsp;&nbsp
                 <INPUT TYPE = "RADIO" NAME = "methodField" value="2" onFocus = "promptType()" onBlur = "clearStatus()">
                </b>
@@ -1007,6 +1007,8 @@
          -->
        </TABLE>
       <BR>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
 
   <!-- a button which the user will click to get the final  caluclation of the Effort and the Duration of a software project
     -->
