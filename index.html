@@ -262,13 +262,23 @@
         var procedure = 0
         var experience = 0
         var qauntity = 0
+        var q1 = 0
+        var q2 = 0
+        var q3 = 0
+        var q4 = 0
+        var q5 = 0
+        var total = 0
         showLOC();
         type = getValue(document.calculateForm.typeField);
         method = getValue(document.calculateForm.methodField);
         procedure = getValue(document.calculateForm.procedureField);
         experience = document.calculateForm.experienceOfWorker.value;
         quantity = document.calculateForm.quantityOfWorkers.value;
-        console.log(experience);
+        q1 = getValue(document.calculateForm.q1);
+        q2 = getValue(document.calculateForm.q2);
+        q3 = getValue(document.calculateForm.q3);
+        q4 = getValue(document.calculateForm.q4);
+        q5 = getValue(document.calculateForm.q5);
         if (type == 0) {  alert("We must select a project type.");}
          else if (type == 1)
               {
@@ -378,6 +388,51 @@
 
               else if (quantity == 10){
                 document.calculateForm.avgLines.value = (document.calculateForm.LOCTotal2.value / quantity);
+              }
+
+              if (q1 == 1){
+                total = total + 1;
+              }
+              else if (q1 == 2){
+                total = total + 2;
+              }
+
+              if (q2 == 1){
+                total = total + 1;
+              }
+              else if (q2 == 2){
+                total = total + 2;
+              }
+
+              if (q3 == 1){
+                total = total + 1;
+              }
+              else if (q3 == 2){
+                total = total + 2;
+              }
+
+              if (q4 == 1){
+                total = total + 1;
+              }
+              else if (q4 == 2){
+                total = total + 2;
+              }
+
+              if (q5 == 1){
+                total = total + 1;
+              }
+              else if (q5 == 2){
+                total = total + 2;
+              }
+
+              if (total>=7){
+                document.calculateForm.Duration.value = roundOff(D*0.9, 2);
+                document.calculateForm.Effort.value = roundOff(E*1.1, 2);
+              }
+
+              else if (total < 7){
+                document.calculateForm.Duration.value = roundOff(D*1.1, 2);
+                document.calculateForm.Effort.value = roundOff(E*0.9, 2);
               }
 
         document.calculateForm.Reset.focus();
@@ -1210,6 +1265,69 @@
              </div>
            </div>
          </div>
+
+         <H2 align="left"><b><i>Additional Factors</i></b></h2><br>
+         <h3> <b> Documentation Protocol Factor</b> </h3><br>
+         <h4> Made By: Andres 000394436 </h2><br>
+         <h3> <b>How having a plan of tasks to follow can effect duration and effort</b> </h3><br>
+         <center>
+
+           <TABLE class="table table-striped">
+             <TR>
+               <TH> <b>Requirement Questions</b>
+               <TH> <b>Yes</b>
+               <TH > <b>No</b>
+
+             <TR>
+               <TD> Is there a project plan in effect?
+                 <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                     <INPUT TYPE = "RADIO" NAME = "q1" value="1" onFocus = "promptDocQ1" onBlur = "clearStatus()">
+                   </b>
+                 <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                     <INPUT TYPE = "RADIO" NAME = "q1" value="2" onFocus = "promptDocQ1" onBlur = "clearStatus()">
+                   </b>
+
+             <TR>
+               <TD> Will your client be involved in the development cycle?
+               <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                   <INPUT TYPE = "RADIO" NAME = "q2" value="1" onFocus = "promptDocQ2" onBlur = "clearStatus()">
+                 </b>
+               <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                   <INPUT TYPE = "RADIO" NAME = "q2" value="2" onFocus = "promptDocQ2" onBlur = "clearStatus()">
+                 </b>
+
+                 <TR>
+                   <TD> Are you prioritizing both requirements and deliverables, along with the associated risks.
+                   <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                       <INPUT TYPE = "RADIO" NAME = "q3" value="1" onFocus = "promptDocQ3()" onBlur = "clearStatus()">
+                     </b>
+                   <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                       <INPUT TYPE = "RADIO" NAME = "q3" value="2" onFocus = "promptDocQ3()" onBlur = "clearStatus()">
+                     </b>
+
+                     <TR>
+                       <TD> Are the goals set achievable?
+                       <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                           <INPUT TYPE = "RADIO" NAME = "q4" value="1" onFocus = "promptDocQ4()" onBlur = "clearStatus()">
+                         </b>
+                       <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                           <INPUT TYPE = "RADIO" NAME = "q4" value="2" onFocus = "promptDocQ4()" onBlur = "clearStatus()">
+                         </b>
+
+                         <TR>
+                           <TD> Are change request forms being used effectively?
+                           <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                               <INPUT TYPE = "RADIO" NAME = "q5" value="1" onFocus = "promptDocQ5()" onBlur = "clearStatus()">
+                             </b>
+                           <TD ><b>&nbsp;&nbsp;&nbsp;&nbsp
+                               <INPUT TYPE = "RADIO" NAME = "q5" value="2" onFocus = "promptDocQ5()" onBlur = "clearStatus()">
+                             </b>
+
+
+            <!-- closing the last table.
+              -->
+            </TABLE>
+           <BR>&nbsp;&nbsp;&nbsp;&nbsp;
 
 
   <!-- a button which the user will click to get the final  caluclation of the Effort and the Duration of a software project
